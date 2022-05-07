@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/CardView.Dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:id="@+id/constrLayout">
+
+
+    <ImageView
+        android:id="@+id/compass"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sharp_navigation_24" />
+    <LinearLayout
+        android:id="@+id/azimuthLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/compass"
+        >
+        <TextView
+            android:id="@+id/azimuthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Azimuth: "
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp"
+            android:layout_marginLeft="70dp"/>
+        <TextView
+            android:id="@+id/azimuthValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/temperatureLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/compass"
+        app:layout_constraintBottom_toTopOf="@id/coordLine"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/tempereatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature: "
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp"
+            android:layout_marginLeft="70dp"/>
+
+        <TextView
+            android:id="@+id/temperatureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Celsius"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/coordLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/temperatureLine"
+        >
+        <TextView
+            android:id="@+id/coordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coordinates: "
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp"
+            android:layout_marginLeft="70dp"/>
+        <TextView
+            android:id="@+id/coordValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0, 0"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lightLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/coordLine"
+        >
+        <TextView
+            android:id="@+id/lightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light: "
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp"
+            android:layout_marginLeft="70dp"/>
+        <TextView
+            android:id="@+id/lightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="354dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
